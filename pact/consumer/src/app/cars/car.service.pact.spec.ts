@@ -83,5 +83,39 @@ describe('CarServicePact', () => {
 
   })
 
+  describe('getSearchedCars', () => {
+    const expectedSearchedCars: Car[] = [
+      {
+        id: "1",
+        make: 'Tesla',
+        model: 'S'
+      }
+    ];
+
+    beforeAll(async () => {
+      await provider.addInteraction({
+        state: 'searched cars exist',
+        uponReceiving: 'a request to GET searched cars',
+        withRequest: {
+          method: 'GET',
+          path: '/car/tesla'
+        },
+        willRespondWith: {
+          status: 200,
+          body: Matchers.somethingLike(expectedSearchedCars)
+        }
+      });
+    });
+
+    it('should get searchd cars', async () => {
+      const carService: CarService = TestBed.inject(CarService);
+
+      await carService.getCar("tesla").toPromise().then(response => {
+        expect(response).toEqual(expectedSearchedCars);
+      });
+    });
+
+  })
+
 })
 

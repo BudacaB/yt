@@ -5,7 +5,7 @@ import au.com.dius.pact.provider.junit5.PactVerificationContext;
 import au.com.dius.pact.provider.junit5.PactVerificationInvocationContextProvider;
 import au.com.dius.pact.provider.junitsupport.Provider;
 import au.com.dius.pact.provider.junitsupport.State;
-import au.com.dius.pact.provider.junitsupport.loader.PactFolder;
+import au.com.dius.pact.provider.junitsupport.loader.PactBroker;
 import com.pact.provider.model.Car;
 import com.pact.provider.service.CarService;
 import org.junit.jupiter.api.BeforeAll;
@@ -23,8 +23,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 @Provider("carservice")
-@PactFolder("pacts")
-//@PactBroker(host = "localhost", port = "9292")
+//@PactFolder("pacts")
+@PactBroker(host = "localhost", port = "9292")
 public class CarServiceVerificationTest {
 
     private CarService carService = mock(CarService.class);
@@ -51,8 +51,14 @@ public class CarServiceVerificationTest {
         List<Car> cars = new ArrayList<>();
         cars.add(new Car(UUID.randomUUID(), "Tesla", "S"));
         cars.add(new Car(UUID.randomUUID(), "Ford", "Mustang"));
-        System.out.println(cars);
         when(carService.getCars()).thenReturn(cars);
+    }
+
+    @State({"searched cars exist"})
+    void searchedCarsExist() {
+        List<Car> cars = new ArrayList<>();
+        cars.add(new Car(UUID.randomUUID(), "Tesla", "S"));
+        when(carService.getCar("tesla")).thenReturn(cars);
     }
 
 

@@ -10,6 +10,8 @@ import { Car } from './car';
 export class CarsComponent implements OnInit {
 
   cars: Car[];
+  searchedCars: Car[];
+  make: String;
 
   constructor(private carService: CarService) { }
 
@@ -21,4 +23,7 @@ export class CarsComponent implements OnInit {
     return this.carService.getCars().subscribe(result => this.cars = result);
   }
 
+  getCar() {
+   return this.carService.getCar(this.make.toLowerCase()).subscribe(result => this.searchedCars = result);
+  }
 }

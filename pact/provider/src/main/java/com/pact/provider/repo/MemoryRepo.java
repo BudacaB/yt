@@ -24,4 +24,14 @@ public class MemoryRepo {
     public void addCar(Car car) {
         this.cars.add(car);
     }
+
+    public List<Car> getCar(String make) {
+        List<Car> searchedCars = new ArrayList<>();
+        for (Car car : cars) {
+            if (make.equalsIgnoreCase(car.getMake())) {
+                searchedCars.add(car);
+            }
+        }
+        return searchedCars;
+    }
 }

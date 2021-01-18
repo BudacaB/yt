@@ -1,5 +1,5 @@
-I, [2021-01-18T00:02:27.269007 #117289]  INFO -- : Registered expected interaction GET /cars
-D, [2021-01-18T00:02:27.270852 #117289] DEBUG -- : {
+I, [2021-01-18T23:41:46.763215 #52993]  INFO -- : Registered expected interaction GET /cars
+D, [2021-01-18T23:41:46.764712 #52993] DEBUG -- : {
   "description": "a request to GET cars",
   "providerState": "cars exist",
   "request": {
@@ -28,8 +28,8 @@ D, [2021-01-18T00:02:27.270852 #117289] DEBUG -- : {
   },
   "metadata": null
 }
-I, [2021-01-18T00:02:27.479736 #117289]  INFO -- : Received request GET /cars
-D, [2021-01-18T00:02:27.481051 #117289] DEBUG -- : {
+I, [2021-01-18T23:41:46.925033 #52993]  INFO -- : Received request GET /cars
+D, [2021-01-18T23:41:46.925385 #52993] DEBUG -- : {
   "path": "/cars",
   "query": "",
   "method": "get",
@@ -44,8 +44,8 @@ D, [2021-01-18T00:02:27.481051 #117289] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2021-01-18T00:02:27.482212 #117289]  INFO -- : Found matching response for GET /cars
-D, [2021-01-18T00:02:27.483373 #117289] DEBUG -- : {
+I, [2021-01-18T23:41:46.926160 #52993]  INFO -- : Found matching response for GET /cars
+D, [2021-01-18T23:41:46.926748 #52993] DEBUG -- : {
   "status": 200,
   "headers": {
   },
@@ -65,6 +65,65 @@ D, [2021-01-18T00:02:27.483373 #117289] DEBUG -- : {
     ]
   }
 }
-I, [2021-01-18T00:02:27.526022 #117289]  INFO -- : Verifying - interactions matched
-I, [2021-01-18T00:02:27.535723 #117289]  INFO -- : Cleared interactions
-I, [2021-01-18T00:02:27.547007 #117289]  INFO -- : Writing pact for carservice to /home/bogdan/Coding/yt/pact/consumer/pacts/car-consumer-carservice.json
+I, [2021-01-18T23:41:46.961144 #52993]  INFO -- : Verifying - interactions matched
+I, [2021-01-18T23:41:46.971486 #52993]  INFO -- : Cleared interactions
+I, [2021-01-18T23:41:46.983039 #52993]  INFO -- : Registered expected interaction GET /car/tesla
+D, [2021-01-18T23:41:46.983475 #52993] DEBUG -- : {
+  "description": "a request to GET searched cars",
+  "providerState": "searched cars exist",
+  "request": {
+    "method": "GET",
+    "path": "/car/tesla"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": [
+        {
+          "id": "1",
+          "make": "Tesla",
+          "model": "S"
+        }
+      ]
+    }
+  },
+  "metadata": null
+}
+I, [2021-01-18T23:41:47.019739 #52993]  INFO -- : Received request GET /car/tesla
+D, [2021-01-18T23:41:47.020148 #52993] DEBUG -- : {
+  "path": "/car/tesla",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "http://localhost:1234/",
+    "User-Agent": "Mozilla/5.0 (linux) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/16.4.0",
+    "Accept-Language": "en",
+    "Host": "localhost:1234",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-01-18T23:41:47.020617 #52993]  INFO -- : Found matching response for GET /car/tesla
+D, [2021-01-18T23:41:47.020901 #52993] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": [
+      {
+        "id": "1",
+        "make": "Tesla",
+        "model": "S"
+      }
+    ]
+  }
+}
+I, [2021-01-18T23:41:47.033067 #52993]  INFO -- : Verifying - interactions matched
+I, [2021-01-18T23:41:47.042720 #52993]  INFO -- : Cleared interactions
+I, [2021-01-18T23:41:47.051025 #52993]  INFO -- : Writing pact for carservice to /home/bogdan/Coding/yt/pact/consumer/pacts/car-consumer-carservice.json

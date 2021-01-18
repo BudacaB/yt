@@ -12,6 +12,10 @@ export class CarService {
   constructor(private http: HttpClient) { }
 
   getCars(){
-    return this.http.get<Car[]>('/cars');
+    return this.http.get<Car[]>(`${this.BASE_URL}/cars`);
+  }
+
+  getCar(make: String) {
+    return this.http.get<Car[]>(`${this.BASE_URL}/car/${make}`);
   }
 }

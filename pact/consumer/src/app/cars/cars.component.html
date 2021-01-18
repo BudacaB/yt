@@ -11,3 +11,27 @@
     </tr>
   </table>
 </div>
+
+<div>
+  <br><br>
+  <form (ngSubmit)="getCar()">
+    <label>Make</label>
+    <input type="text" [(ngModel)]="make" name="make">
+    <br><br>
+    <button type="submit">Search</button>
+  </form>
+  <br><br>
+</div>
+
+<div>
+  <table style="width: 100%;">
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+    </tr>
+    <tr *ngFor="let car of searchedCars">
+      <td style="width: 50%">{{ car.make }}</td>
+      <td style="width: 50%">{{ car.model }}</td>
+    </tr>
+  </table>
+</div>

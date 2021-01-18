@@ -16,4 +16,8 @@ public class CarService {
     public List<Car> getCars() {
         return memoryRepo.getCars();
     }
+
+    public List<Car> getCar(String make) {
+        return memoryRepo.getCar(make);
+    }
 }

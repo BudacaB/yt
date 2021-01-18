@@ -35,6 +35,31 @@
           }
         }
       }
+    },
+    {
+      "description": "a request to GET searched cars",
+      "providerState": "searched cars exist",
+      "request": {
+        "method": "GET",
+        "path": "/car/tesla"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": "1",
+            "make": "Tesla",
+            "model": "S"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
     }
   ],
   "metadata": {
