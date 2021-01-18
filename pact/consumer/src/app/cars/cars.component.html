@@ -1,0 +1,13 @@
+<h2 style="text-align: center;">Cars</h2>
+<div style="text-align: center;">
+  <table style="width: 100%;">
+    <tr>
+      <th>Make</th>
+      <th>Model</th>
+    </tr>
+    <tr *ngFor="let car of cars">
+      <td style="width: 50%">{{ car.make }}</td>
+      <td style="width: 50%">{{ car.model }}</td>
+    </tr>
+  </table>
+</div>

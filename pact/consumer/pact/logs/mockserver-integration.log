@@ -1,0 +1,70 @@
+I, [2021-01-18T00:02:27.269007 #117289]  INFO -- : Registered expected interaction GET /cars
+D, [2021-01-18T00:02:27.270852 #117289] DEBUG -- : {
+  "description": "a request to GET cars",
+  "providerState": "cars exist",
+  "request": {
+    "method": "GET",
+    "path": "/cars"
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+    },
+    "body": {
+      "json_class": "Pact::SomethingLike",
+      "contents": [
+        {
+          "id": "1",
+          "make": "Tesla",
+          "model": "S"
+        },
+        {
+          "id": "2",
+          "make": "BMW",
+          "model": "3Series"
+        }
+      ]
+    }
+  },
+  "metadata": null
+}
+I, [2021-01-18T00:02:27.479736 #117289]  INFO -- : Received request GET /cars
+D, [2021-01-18T00:02:27.481051 #117289] DEBUG -- : {
+  "path": "/cars",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json, text/plain, */*",
+    "Referer": "http://localhost:1234/",
+    "User-Agent": "Mozilla/5.0 (linux) AppleWebKit/537.36 (KHTML, like Gecko) jsdom/16.4.0",
+    "Accept-Language": "en",
+    "Host": "localhost:1234",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2021-01-18T00:02:27.482212 #117289]  INFO -- : Found matching response for GET /cars
+D, [2021-01-18T00:02:27.483373 #117289] DEBUG -- : {
+  "status": 200,
+  "headers": {
+  },
+  "body": {
+    "json_class": "Pact::SomethingLike",
+    "contents": [
+      {
+        "id": "1",
+        "make": "Tesla",
+        "model": "S"
+      },
+      {
+        "id": "2",
+        "make": "BMW",
+        "model": "3Series"
+      }
+    ]
+  }
+}
+I, [2021-01-18T00:02:27.526022 #117289]  INFO -- : Verifying - interactions matched
+I, [2021-01-18T00:02:27.535723 #117289]  INFO -- : Cleared interactions
+I, [2021-01-18T00:02:27.547007 #117289]  INFO -- : Writing pact for carservice to /home/bogdan/Coding/yt/pact/consumer/pacts/car-consumer-carservice.json

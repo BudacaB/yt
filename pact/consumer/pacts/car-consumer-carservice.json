@@ -1,0 +1,45 @@
+{
+  "consumer": {
+    "name": "car-consumer"
+  },
+  "provider": {
+    "name": "carservice"
+  },
+  "interactions": [
+    {
+      "description": "a request to GET cars",
+      "providerState": "cars exist",
+      "request": {
+        "method": "GET",
+        "path": "/cars"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+        },
+        "body": [
+          {
+            "id": "1",
+            "make": "Tesla",
+            "model": "S"
+          },
+          {
+            "id": "2",
+            "make": "BMW",
+            "model": "3Series"
+          }
+        ],
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  }
+}

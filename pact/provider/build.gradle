@@ -1,0 +1,26 @@
+plugins {
+	id 'org.springframework.boot' version '2.4.2'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.pact'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.projectlombok:lombok:1.18.16'
+	implementation 'junit:junit:4.12'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'au.com.dius.pact.provider:junit5:4.1.9'
+	testCompile "org.mockito:mockito-core:2.+"
+}
+
+test {
+	useJUnitPlatform()
+}
