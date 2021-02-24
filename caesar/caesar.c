@@ -9,8 +9,7 @@ int main (int argc, char *argv[])
     // check for the command line argument
     if (argc == 2)
     {
-        // convert key to int
-        int key = atoi(argv[1]);
+
         // store key validity
         bool valid_key = false;
 
@@ -28,6 +27,9 @@ int main (int argc, char *argv[])
                 return 1;
             }
         }
+
+        // convert key to int
+        int key = atoi(argv[1]);
 
         // check for upper and lower case letters and apply the formula
         if (valid_key == true)
