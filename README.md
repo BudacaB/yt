@@ -21,12 +21,51 @@ Please make sure to use the appropiate tools as needed per case:
 This is also per case, the videos and their descriptions can also be useful.
 ```
 
+##### Table of Contents  
+[Introduction to TDD - Test Driven Development](#Introduction-to-TDD-\--Test-Driven-Development)  
+[How to render a staircase in the console - C Programming](#How-to-render-a-staircase-in-the-console-\--C-Programming)  
+
 ## Contents
 
-### <b></b>
+### <b>Introduction to TDD - Test Driven Development</b>
+Running a couple of TDD examples with a basic Spring Boot and Kotlin app, with the help of JUnit and Mockito. <br>
+[Video](https://youtu.be/MWrThaOWrPQ) | [Code](https://github.com/BudacaB/yt/tree/master/tdd)
+
+### <b>Introduction to Docker Compose - containerizing an application</b>
+Running an Angular app, a Java/SpringBoot app and a Cassandra DB with the help of Docker Compose. <br>
+[Video](https://youtu.be/vYg6TYxSSgs) | [Code FE](https://github.com/BudacaB/yt/tree/master/fullstack-fe) | [Code BE](https://github.com/BudacaB/yt/tree/master/fullstack-be)
+
+### <b>Introduction to Messaging - MQTT, Spring Boot, Docker, Kotlin, Eclipse Mosquitto</b>
+Running a subscriber app and a publisher app for MQTT Messaging with the help of Eclipse Mosquitto, Spring Boot, Docker and Kotlin. <br>
+[Video](https://youtu.be/Swdfi-jOdM4) | [Code](https://github.com/BudacaB/yt/tree/master/mqtt)
+
+### <b>Introduction to Consumer Driven Pact Testing - Angular, Spring Boot, Docker, Jest, Junit and Mockito</b>
+Running a consumer app and a provider app for Pact Testing with the help of Angular, Spring Boot, Docker, Jest, Junit and Mockito. <br>
+[Video](https://youtu.be/OZz7UyHnyKg) | [Code](https://github.com/BudacaB/yt/tree/master/pact)
+
+### <b>Introduction to DevOps - AWS // CI/CD // CD pipelines</b>
+Getting an understanding on DevOps via CD Pipelines and how Cloud providers can help. <br>
+[Video](https://youtu.be/1ikyaz8Vx1E) | [Code](https://github.com/BudacaB/yt/tree/master/devops)
+
+### <b>How to run a Tideman election - C Programming</b>
+Going over a coding problem which requires us to run a Tideman election and solving it with the help of the C programming language. <br>
+[Video](https://youtu.be/YhsAA0n4UzQ) | [Code](https://github.com/BudacaB/yt/tree/master/tideman)
+
+### <b>How to run a runoff election - C Programming</b>
+Going over a coding problem which requires us to run a runoff election and solving it with the help of the C programming language. <br>
+[Video](https://youtu.be/cLDdb_VZh_I) | [Code](https://github.com/BudacaB/yt/tree/master/runoff)
+
+### <b>How to run a plurality election - C Programming</b>
+Going over a coding problem which requires us to run a plurality election and solving it with the help of the C programming language. <br>
+[Video](https://youtu.be/r2KPetAvfUc) | [Code](https://github.com/BudacaB/yt/tree/master/plurality)
+
+### <b>How to encrypt messages (Substitution cipher) - C Programming</b>
+Going over a coding problem which requires us to encrypt text using a Substitution cipher, and solving it with the help of the C programming language. <br>
+[Video](https://youtu.be/FFhpvirLKSA) | [Code](https://github.com/BudacaB/yt/tree/master/substitution)
 
 ### <b>How to make a FullStack App - Using Cassandra DB with Docker, Angular, and Spring Boot</b>
 Making a small fullstack application with the help of Docker, Cassandra DB, Angular and Spring Boot. <br>
+[Video](https://youtu.be/i-2N1nOPR5A) | [Code FE](https://github.com/BudacaB/yt/tree/master/fullstack-fe) | [Code BE](https://github.com/BudacaB/yt/tree/master/fullstack-be)
 
 ### <b>How to encrypt messages (Caesar cipher) - C Programming</b>
 Going over a coding problem which requires us to encrypt text using a Caesar cipher, and solving it with the help of the C programming language. <br>
