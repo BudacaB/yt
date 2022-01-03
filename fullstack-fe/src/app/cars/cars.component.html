@@ -1,0 +1,15 @@
+<h2>Cars</h2>
+<div *ngFor="let car of cars">
+  {{car | json}}
+</div>
+<br><br>
+<h2>Save Car</h2>
+<form (ngSubmit)="saveCar()">
+  <label>Make</label>
+  <input type="text" [(ngModel)]="car.make" name="make">
+  <br><br>
+  <label>Model</label>
+  <input type="text" [(ngModel)]="car.model" name="model">
+  <br><br>
+  <button type="submit">Save</button>
+</form>

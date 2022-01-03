@@ -1,0 +1,27 @@
+version: '3.4'
+services:
+  cassandra:
+    image: cassandra:2.1.20
+    container_name: cassandra
+    volumes:
+      - "./fullstack-be/cassandra/init.sh:/init.sh"
+    ports:
+      - 9042:9042
+    command: "sh /init.sh"
+
+  cars-app:
+    build: ./fullstack-be
+    container_name: cars-app
+    ports:
+      - 8080:8080
+    network_mode: host
+    restart: on-failure
+    depends_on:
+      - cassandra
+
+  cars-ui:
+    build: ./fullstack-fe
+    container_name: cars-ui
+    ports:
+      - 4200:80
+    network_mode: host

@@ -1,0 +1,8 @@
+version: '3.4'
+services:
+  cars-ui:
+    build: .
+    container_name: cars-ui
+    ports:
+      - 4200:80
+    network_mode: host

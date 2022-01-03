@@ -1,0 +1,8 @@
+cassandra:
+    image: cassandra:2.1.20
+    container_name: cassandra
+    volumes:
+      - "./init.sh:/init.sh"
+    ports:
+      - 9042:9042
+    command: "sh /init.sh"
